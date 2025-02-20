@@ -113,7 +113,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  Have any questions or ideas to share? Feel free to reach out!#You can even add a little note about which of these is the best way to reach you.
+  Have any questions or ideas to share? Feel free to reach out!
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -144,7 +144,7 @@ pagination:
 
 related_blog_posts:
   enabled: true
-  max_related: 5
+  max_related: 10
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
