@@ -42,6 +42,7 @@ html[data-theme="dark"] {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
   line-height: 1.65;
+  padding-bottom: 4rem;
   background-image: radial-gradient(ellipse 80% 45% at 50% -10%, rgba(138, 180, 248, 0.07), transparent);
   background-repeat: no-repeat;
 }
@@ -134,13 +135,14 @@ body.fixed-top-nav {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-top: 2.25rem;
-  margin-bottom: 1.1rem;
+  margin-top: 2.75rem;
+  margin-bottom: 1.35rem;
   color: #98a2b3;
 }
 
 // News feed with subtle timeline rail + always-visible scrollbar
 .news-list-wrap {
+  padding-left: 0.45rem;
   padding-right: 0.85rem;
   border-bottom: 1px solid var(--global-divider-color);
   scrollbar-width: thin;
@@ -167,25 +169,25 @@ body.fixed-top-nav {
 
 .news-feed {
   list-style: none;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1.15rem;
   margin: 0;
-  border-left: 1px solid rgba(138, 180, 248, 0.22);
+  border-left: 1px solid rgba(138, 180, 248, 0.25);
 }
 
 .news-feed-item {
   position: relative;
-  display: grid;
-  grid-template-columns: 82px 1fr;
-  gap: 0.9rem;
+  display: flex;
+  justify-content: space-between;
   align-items: baseline;
-  padding: 0.45rem 0;
+  gap: 2rem;
+  padding: 0.85rem 0;
 }
 
 .news-feed-item::before {
   content: "";
   position: absolute;
-  left: -1.28rem;
-  top: 0.92rem;
+  left: -1.4rem;
+  top: 1.3rem;
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -193,9 +195,14 @@ body.fixed-top-nav {
 }
 
 .news-date {
-  color: var(--global-theme-color);
+  flex-shrink: 0;
+  color: #93bbfc;
+  background-color: rgba(138, 180, 248, 0.12);
+  border: 1px solid rgba(138, 180, 248, 0.25);
+  border-radius: 999px;
+  padding: 0.18em 0.7em;
   font-weight: 600;
-  font-size: 0.84rem;
+  font-size: 0.76rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -203,16 +210,17 @@ body.fixed-top-nav {
 .news-body {
   font-size: 0.94rem;
   color: #c5ccd6;
+  line-height: 1.6;
 }
 
-// Clean full-width publications with subtle left accent on hover
+// Easy-to-read Publications list
 .publications ol.bibliography {
   list-style: none;
   padding-left: 0;
 }
 
 .publications ol.bibliography li {
-  padding: 0.85rem 0 0.85rem 0.85rem;
+  padding: 1.35rem 0 1.35rem 1rem;
   margin-bottom: 0 !important;
   border-bottom: 1px solid var(--global-divider-color);
   border-left: 2px solid transparent;
@@ -232,13 +240,13 @@ body.fixed-top-nav {
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.35rem;
 }
 
 .publications ol.bibliography li .title {
   font-weight: 600;
-  font-size: 1.02rem;
-  color: #f4f5f7;
+  font-size: 1.05rem;
+  color: #f8fafc;
   line-height: 1.4;
 }
 
@@ -247,34 +255,52 @@ body.fixed-top-nav {
 }
 
 .publications ol.bibliography li .author {
-  font-size: 0.92rem;
-  color: #c5ccd6;
-  margin-bottom: 0.15rem;
+  font-size: 0.93rem;
+  color: #b8c1ce;
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+// Highlight self-author cleanly in bold white without underline
+.publications ol.bibliography li .author em {
+  font-style: normal;
+  font-weight: 600;
+  color: #f4f5f7;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .publications ol.bibliography li .periodical {
-  font-size: 0.88rem;
-  color: #98a2b3;
+  font-size: 0.9rem;
+  color: #9aa5b4;
+  line-height: 1.45;
+}
+
+.publications ol.bibliography li .periodical em {
+  font-style: normal;
+  color: #b8c1ce;
 }
 
 .publications ol.bibliography li .abbr abbr.badge {
-  background-color: rgba(138, 180, 248, 0.12) !important;
-  color: #8ab4f8 !important;
-  border: 1px solid rgba(138, 180, 248, 0.28);
+  background-color: rgba(138, 180, 248, 0.14) !important;
+  color: #93bbfc !important;
+  border: 1px solid rgba(138, 180, 248, 0.3);
   font-weight: 600;
-  font-size: 0.74rem;
-  padding: 0.25em 0.6em;
+  font-size: 0.75rem;
+  padding: 0.28em 0.65em;
   border-radius: 999px;
 }
 
 .publications ol.bibliography li .links {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 .publications ol.bibliography li .links a.btn {
   border-radius: 999px;
   font-size: 0.76rem;
-  padding: 0.15rem 0.65rem;
+  font-weight: 500;
+  padding: 0.18rem 0.7rem;
+  background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.18);
   color: #e4e7ec;
 }

@@ -16,7 +16,6 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <li class="news-feed-item">
-            <span class="news-date">{{ item.date | date: '%b %Y' }}</span>
             <span class="news-body">
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
@@ -24,6 +23,7 @@
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
               {% endif %}
             </span>
+            <span class="news-date">{{ item.date | date: '%b %Y' }}</span>
           </li>
         {% endfor %}
       </ul>
