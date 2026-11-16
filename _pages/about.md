@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # using inline links below the intro instead
 ---
 
-I am a fourth-year PhD student in electrical and computer engineering at the University of Illinois Chicago, supervised by [Prof. Hulya Seferoglu](https://sites.google.com/uic.edu/nrl/home?authuser=0). I hold a Bachelor's from IUST and a Master's from Sharif University of Technology. 
+I am a fourth-year PhD student in electrical and computer engineering at the University of Illinois Chicago, supervised by [Prof. Hulya Seferoglu](https://sites.google.com/uic.edu/nrl/home?authuser=0). I hold a Bachelor's from IUST and a Master's from Sharif University of Technology.
 
 I'm interested in machine learning, optimization, and their intersections with decentralized systems and networking.
 

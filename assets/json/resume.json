@@ -91,11 +91,7 @@
     {
       "name": "Programming Languages",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Python",
-        "C/C++",
-        "Matlab"
-      ]
+      "keywords": ["Python", "C/C++", "Matlab"]
     },
     {
       "name": "Soft Skills",
