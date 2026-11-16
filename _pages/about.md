@@ -12,9 +12,11 @@ profile:
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # using inline links below the intro instead
 ---
 
 I am a fourth-year PhD student in electrical and computer engineering at the University of Illinois Chicago, supervised by [Prof. Hulya Seferoglu](https://sites.google.com/uic.edu/nrl/home?authuser=0). I hold a Bachelor's from IUST and a Master's from Sharif University of Technology. 
 
 I'm interested in machine learning, optimization, and their intersections with decentralized systems and networking.
+
+[Email](mailto:{{ site.email }}) &middot; [Scholar](https://scholar.google.com/citations?user={{ site.scholar_userid }}) &middot; [GitHub](https://github.com/{{ site.github_username }}) &middot; [LinkedIn](https://www.linkedin.com/in/{{ site.linkedin_username }}) &middot; [CV](/assets/pdf/Peyman_Gholami.pdf)

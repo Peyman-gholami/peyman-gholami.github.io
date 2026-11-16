@@ -23,3 +23,279 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+// =============================================================================
+// Modern Minimal Dark Academic Template
+// =============================================================================
+
+html[data-theme="dark"] {
+  --global-bg-color: #141619;
+  --global-card-bg-color: #1b1e23;
+  --global-text-color: #e4e7ec;
+  --global-text-color-light: #98a2b3;
+  --global-theme-color: #8ab4f8;
+  --global-hover-color: #aecbfa;
+  --global-divider-color: rgba(255, 255, 255, 0.09);
+  --global-code-bg-color: #1e2228;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.65;
+  background-image: radial-gradient(ellipse 80% 45% at 50% -10%, rgba(138, 180, 248, 0.07), transparent);
+  background-repeat: no-repeat;
+}
+
+body.fixed-top-nav {
+  padding-top: 2.5rem !important;
+}
+
+#navbar {
+  display: none !important;
+}
+
+// Modern Split Hero (Avatar Left + Bio Right)
+.modern-hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.hero-avatar {
+  flex-shrink: 0;
+  width: 148px;
+}
+
+.hero-avatar img {
+  width: 148px;
+  height: 148px;
+  object-fit: cover;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.post .post-header {
+  margin-bottom: 0.75rem !important;
+}
+
+.post .post-header .post-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.25rem;
+  color: #f4f5f7;
+}
+
+.hero-bio p {
+  margin-bottom: 0.75rem;
+  color: #c5ccd6;
+  font-size: 0.98rem;
+}
+
+// Style the last paragraph (Email · Scholar · GitHub · LinkedIn · CV) as sleek pills
+.hero-bio p:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  color: transparent;
+  font-size: 0;
+}
+
+.hero-bio p:last-child a {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: #e4e7ec;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.hero-bio p:last-child a:hover {
+  border-color: var(--global-theme-color);
+  background: rgba(138, 180, 248, 0.12);
+  color: var(--global-theme-color);
+}
+
+.post article h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2.25rem;
+  margin-bottom: 1.1rem;
+  color: #98a2b3;
+}
+
+// News feed with subtle timeline rail + always-visible scrollbar
+.news-list-wrap {
+  padding-right: 0.85rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(138, 180, 248, 0.45) rgba(255, 255, 255, 0.05);
+}
+
+.news-list-wrap::-webkit-scrollbar {
+  width: 7px;
+}
+
+.news-list-wrap::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+}
+
+.news-list-wrap::-webkit-scrollbar-thumb {
+  background: rgba(138, 180, 248, 0.45);
+  border-radius: 999px;
+}
+
+.news-list-wrap::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 180, 248, 0.7);
+}
+
+.news-feed {
+  list-style: none;
+  padding: 0 0 0 1rem;
+  margin: 0;
+  border-left: 1px solid rgba(138, 180, 248, 0.22);
+}
+
+.news-feed-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 0.9rem;
+  align-items: baseline;
+  padding: 0.45rem 0;
+}
+
+.news-feed-item::before {
+  content: "";
+  position: absolute;
+  left: -1.28rem;
+  top: 0.92rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--global-theme-color);
+}
+
+.news-date {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.news-body {
+  font-size: 0.94rem;
+  color: #c5ccd6;
+}
+
+// Clean full-width publications with subtle left accent on hover
+.publications ol.bibliography {
+  list-style: none;
+  padding-left: 0;
+}
+
+.publications ol.bibliography li {
+  padding: 0.85rem 0 0.85rem 0.85rem;
+  margin-bottom: 0 !important;
+  border-bottom: 1px solid var(--global-divider-color);
+  border-left: 2px solid transparent;
+  transition: border-left-color 0.15s ease;
+}
+
+.publications ol.bibliography li:hover {
+  border-left-color: var(--global-theme-color);
+}
+
+.publications ol.bibliography li:last-child {
+  border-bottom: none;
+}
+
+.publications ol.bibliography li .pub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.publications ol.bibliography li .title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: #f4f5f7;
+  line-height: 1.4;
+}
+
+.publications ol.bibliography li .abbr {
+  flex-shrink: 0;
+}
+
+.publications ol.bibliography li .author {
+  font-size: 0.92rem;
+  color: #c5ccd6;
+  margin-bottom: 0.15rem;
+}
+
+.publications ol.bibliography li .periodical {
+  font-size: 0.88rem;
+  color: #98a2b3;
+}
+
+.publications ol.bibliography li .abbr abbr.badge {
+  background-color: rgba(138, 180, 248, 0.12) !important;
+  color: #8ab4f8 !important;
+  border: 1px solid rgba(138, 180, 248, 0.28);
+  font-weight: 600;
+  font-size: 0.74rem;
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+}
+
+.publications ol.bibliography li .links {
+  margin-top: 0.4rem;
+}
+
+.publications ol.bibliography li .links a.btn {
+  border-radius: 999px;
+  font-size: 0.76rem;
+  padding: 0.15rem 0.65rem;
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #e4e7ec;
+}
+
+.publications ol.bibliography li .links a.btn:hover {
+  background: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  color: #141619;
+}
+
+@media (max-width: 640px) {
+  .modern-hero {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .news-feed-item {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+  .publications ol.bibliography li .pub-header {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}
